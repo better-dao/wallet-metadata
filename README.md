@@ -20,23 +20,45 @@ crypto wallet metadata
 make install
 ```
 
+- init:
+
+```bash
+make init 
+
+# or:
+
+task init
+
+```
+
 
 - run:
 
 
 ```bash
-
-make run 
+make gen 
 
 # or
 
-task run
+task gen
 
 ```
 
+## wallet contract metadata:
+
+
+### ETH:
+
+- https://github.com/MetaMask/contract-metadata/blob/master/contract-map.json
+
+
+### BSC: 
+
+- 
 
 
 ## ref: 
 
 - https://taskfile.dev/#/usage?id=env-files
 - https://github.com/better-go/pkg
+- https://gobyexample.com/writing-files

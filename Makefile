@@ -8,8 +8,5 @@ install:
 init:
 	task init
 
-run:
-	task run
-
-gen-eth:
-	task gen-eth
+gen:
+	task gen
