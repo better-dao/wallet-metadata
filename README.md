@@ -38,4 +38,5 @@ task run
 
 ## ref: 
 
-- 
+- https://taskfile.dev/#/usage?id=env-files
+- https://github.com/better-go/pkg

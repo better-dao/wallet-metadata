@@ -6,6 +6,8 @@ import (
 
 	"github.com/better-go/pkg/log"
 	"github.com/urfave/cli/v2"
+
+	"metadata/app/internal/task"
 )
 
 func main() {
@@ -67,6 +69,7 @@ func Runner() {
 			switch chainType {
 			case "eth":
 				// todo
+				_ = task.GenEthContractMeta(from, to)
 
 			case "bsc":
 				// todo:
