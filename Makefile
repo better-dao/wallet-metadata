@@ -10,3 +10,6 @@ init:
 
 run:
 	task run
+
+gen-eth:
+	task gen-eth

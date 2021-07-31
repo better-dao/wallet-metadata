@@ -3,6 +3,6 @@ module metadata
 go 1.15
 
 require (
-	github.com/json-iterator/go v1.1.11 // indirect
-	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/better-go/pkg v0.1.17
+	github.com/urfave/cli/v2 v2.3.0
 )

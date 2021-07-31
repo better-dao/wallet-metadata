@@ -38,15 +38,39 @@ tasks:
 
   init:
     cmds:
+      - cp .env.local .env
       - task: tidy
 
   tidy:
     cmds:
       - go mod tidy -v
 
+
+
+  run-auto:
+    cmds:
+      - air -d    # auto run
+
+  # exec bin:
+  exec:
+    cmds:
+      - ./tmp/main --chainType=${CHAIN_TYPE} --fromFile=${FROM_FILE} --toFile=${TO_FILE}   # 环境变量传参
+
+  build:
+    cmds:
+      - go build -o ./tmp/main ./app/cmd
+
   run:
     cmds:
-      - fvm flutter run
+      - go run ./app/cmd
+
+
+  #########################################################################
+
+
+  gen-eth:
+    cmds:
+      - task: run-auto # auto run
 
 
   #########################################################################
