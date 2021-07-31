@@ -34,9 +34,7 @@ tasks:
 
   install:
     cmds:
-      - brew tap leoafarias/fvm   # flutter version management
-      - brew install fvm
-      - fvm install 2.2.3 # install flutter sdk
+      - brew install go-task/tap/go-task
 
   init:
     cmds:
