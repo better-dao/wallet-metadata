@@ -1,0 +1,86 @@
+version: '3'
+
+################################################################################################
+#
+# local dev:
+#   - run:
+#   - clean:
+#
+################################################################################################
+
+#
+# global vars: https://taskfile.dev/#/usage?id=variables
+#
+vars:
+  VAR1: "some-var"
+
+# global env:
+env:
+  ENV1: testing
+
+# env file:
+dotenv:
+  - .env
+
+################################################################################################
+
+
+# task groups:
+tasks:
+  default:
+    cmds:
+      - task: init
+      - task: run
+
+  install:
+    cmds:
+      - brew tap leoafarias/fvm   # flutter version management
+      - brew install fvm
+      - fvm install 2.2.3 # install flutter sdk
+
+  init:
+    cmds:
+      - task: tidy
+
+  tidy:
+    cmds:
+      - go mod tidy -v
+
+  run:
+    cmds:
+      - fvm flutter run
+
+
+  #########################################################################
+
+  mkdir:
+    desc: "create app folder"
+    cmds:
+      - mkdir -p {{.FOLDER}}
+
+
+  #########################################################################
+
+  stash:
+    cmds:
+      - git stash
+
+  quick:
+    cmds:
+      - task: commit
+      - task: pull
+      - task: push
+
+  commit:
+    cmds:
+      - git add lib/
+      - git commit -m "update"
+
+  push:
+    cmds:
+      - git push origin main --tags
+
+  pull:
+    cmds:
+      - git config pull.rebase false
+      - git pull
