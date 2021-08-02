@@ -20,7 +20,7 @@ crypto wallet metadata
 make install
 ```
 
-- init:
+- init: (auto gen `.env` file)
 
 ```bash
 make init 
@@ -31,7 +31,7 @@ task init
 
 ```
 
-- see `.env` file: [.env](.env)
+- see `.env` file: [.env](.env.local) (make init will copy `.env.local` to `.env`)
     - change `env vars` to gen `eth` or `bsc` metadata
 
 - run:
