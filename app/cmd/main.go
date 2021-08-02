@@ -69,7 +69,7 @@ func Runner() {
 			switch chainType {
 			case "eth":
 				// todo
-				_ = task.GenEthContractMeta(from, to)
+				_ = task.GenEthMainNetContractMeta(from, to)
 
 			case "bsc":
 				// todo:
