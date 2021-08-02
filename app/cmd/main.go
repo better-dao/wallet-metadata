@@ -50,6 +50,7 @@ func Runner() {
 			},
 		},
 
+
 		//
 		// 执行动作:
 		//
@@ -68,12 +69,12 @@ func Runner() {
 			// dispatch:
 			switch chainType {
 			case "eth":
-				// todo
 				_ = task.GenEthMainNetContractMeta(from, to)
-
 			case "bsc":
-				// todo:
-
+				if to == "" {
+					to = "dist/bsc_contract_map.json"
+				}
+				_ = task.GenBscMainNetTokenMeta(to)
 			}
 			return nil
 		},

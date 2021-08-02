@@ -116,3 +116,22 @@ func GenEthMainNetContractMeta(from string, to string) error {
 		return result, nil
 	})
 }
+
+func GenBscMainNetTokenMeta(to string) error {
+	input, err := pkg.GetBscTokenMeta()
+	if err != nil {
+		return err
+	}
+
+	data := make(map[string]interface{})
+
+	chainId := "90"
+	data[chainId] = input
+
+	/// convert:
+	output, _ := pkg.ConvertToJsonBytes(data)
+
+	// write:
+	return pkg.WriteJsonFile(to, output)
+
+}
