@@ -11,6 +11,13 @@ crypto wallet metadata
 - dist: `dist`
 
 
+## metadata:
+
+- [dist](dist)
+- ETH Tokens: [dist/eth_contract_map.json](./dist/eth_contract_map.json)
+- BSC Tokens: [dist/bsc_contract_map.json](dist/bsc_contract_map.json)
+
+
 ## quickstart:
 
 
