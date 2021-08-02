@@ -123,15 +123,9 @@ func GenBscMainNetTokenMeta(to string) error {
 		return err
 	}
 
-	data := make(map[string]interface{})
-
-	chainId := "90"
-	data[chainId] = input
-
 	/// convert:
-	output, _ := pkg.ConvertToJsonBytes(data)
+	output, _ := pkg.ConvertToJsonBytes(input)
 
 	// write:
 	return pkg.WriteJsonFile(to, output)
-
 }

@@ -6,9 +6,9 @@ import (
 
 func TestHttpGet(t *testing.T) {
 
-	HttpGet(bscTokenUrl)
+	HttpGet(bscTokenMainNetUrl)
 
-	//HttpGet(ethTokenUrl)
+	//HttpGet(ethTokenMainNetUrl)
 }
 
 func TestGetBscTokenMeta(t *testing.T) {
