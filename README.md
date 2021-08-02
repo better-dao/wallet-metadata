@@ -31,6 +31,8 @@ task init
 
 ```
 
+- see `.env` file: [.env](.env)
+    - change `env vars` to gen `eth` or `bsc` metadata
 
 - run:
 
