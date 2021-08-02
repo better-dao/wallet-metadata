@@ -51,7 +51,7 @@ func genEthContractMeta(from string, to string, taskFn HandlerFunc) error {
 	// fix &
 	err := pkg.ReadJsonFile(from, &input)
 
-	log.Infof("read: $+v, err: $v", input, err)
+	//log.Infof("read: $+v, err: $v", input, err)
 	if err != nil {
 		return err
 	}
@@ -97,7 +97,7 @@ func GenEthMainNetContractMeta(from string, to string) error {
 				keyTokenName = name
 			}
 
-			log.Infof("contract item: %+v, key=%v", vv, keyTokenName)
+			//log.Infof("contract item: %+v, key=%v", vv, keyTokenName)
 
 			value := vv
 			value["address"] = k
@@ -106,6 +106,8 @@ func GenEthMainNetContractMeta(from string, to string) error {
 			contracts[keyTokenName] = value
 
 		}
+
+		log.Infof("mainNet token contract address sum: %+v", len(contracts))
 
 		// fmt: mainNet
 		result[key] = contracts
